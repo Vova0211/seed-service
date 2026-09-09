@@ -1,7 +1,7 @@
 # Окружение
 .venv/
 .idea/
-
+.logs/
 # Кэши Python
 __pycache__/
 *.pyc
