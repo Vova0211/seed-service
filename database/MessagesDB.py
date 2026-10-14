@@ -1,8 +1,10 @@
-import psycopg
 import pathlib
 
+import psycopg
 from psycopg.sql import SQL
+
 from database.utils import Message
+
 
 class MessagesDB:
     path_prefix = pathlib.Path("database/sql/messages")
