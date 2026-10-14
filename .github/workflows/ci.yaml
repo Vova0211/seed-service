@@ -55,7 +55,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ env.REPOSITORY_URL }}:latest
+          tags: ${{ env.IMAGE_URL }}:latest
 
   release:
     needs: check
