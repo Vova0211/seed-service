@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 
 from config import settings
-from database.MessagesDB import MessagesDB
+from database.messages_db import MessagesDB
 
 app = FastAPI()
 database = MessagesDB(settings.database_url)

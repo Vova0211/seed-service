@@ -14,8 +14,8 @@ jobs:
       - name: Download dependencies
         run: uv sync
 
-#      - name: Linter check
-#        run: uv run ruff check .
+      - name: Linter check
+        run: uv run ruff check .
       - name: Run tests
         run: uv run pytest
 
