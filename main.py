@@ -2,7 +2,7 @@ from fastapi import FastAPI
 
 from config import settings
 from database.messages_db import MessagesDB
-
+from database.utils import Message
 app = FastAPI()
 database = MessagesDB(settings.database_url)
 
@@ -23,3 +23,14 @@ def db_check():
         db.execute("SELECT 1")
 
     return {"status": "ok"}
+
+@app.get("/messages")
+def list_messages():
+    return database.get_all_messages()
+
+
+@app.post("/messages")
+def add_message(message: Message):
+    database.add_message(message)
+
+    return {"ok": True}
